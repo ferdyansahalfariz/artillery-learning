@@ -1,9 +1,9 @@
 config:
-  target: "https://imdb-promptflix-ferdy-940d7813f0.ddn.hasura.app"
+  target: '{{ $env.GRAPHQL_HOST }}'
   processor: "./hooks-config.js"
   defaults:
       headers:
-        x-hasura-ddn-token: eyJhbGciOiJFZERTQSIsImtpZCI6IjlkX2JMaEVGbWpSelMwanpxajlOSk15Vmt4TUpDZGpJeVkweFZxMFpWNlEiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJjNmIyMzZhNy1iMGRiLTRiNzYtYTRmYS1hY2ZlNmZlMmVkOTUiLCJleHAiOjE3NTA4MzAzNzMsImlhdCI6MTc1MDgyNjc3MywiaXNzIjoiaHR0cHM6Ly9hdXRoLnByby5oYXN1cmEuaW8vZGRuL3Rva2VuIiwic3ViIjoiNzFhNmU4ZWEtYTUxMC00ZTkzLWFjNWEtMDhlMzMxY2IwMjg4In0.ojR2KKC5Uuc4J0ow6h6ADPx41qicXSqQFXA0EVk5RlGcFg3XIT2-GBB6sOLDetWdfExrB9B20OJzX7hnAsfYCg
+        x-hasura-ddn-token: '{{ $env.DDN_TOKEN }}'
         # Auth-Token: ${AuthTOKEN}
         # x-hasura-admin-secret: "WBUwzIiW1nK86lW"
         # add additional header (if any)
