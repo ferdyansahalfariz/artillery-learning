@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Artillery Performance Report</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    </style>
+</head>
+<body>
+    <h1>📊 Artillery Performance Report</h1>
+    <p><strong>Scenarios created:</strong> {{ scenario_created }} | <strong>Completed:</strong> {{ scenario_completed }}</p>
+
+    <h2>Mean Latency Over Time</h2>
+    <div id="latency"></div>
+
+    <h2>RPS Over Time</h2>
+    <div id="rps"></div>
+
+    <h2>Concurrent Users Over Time</h2>
+    <div id="users"></div>
+
+    <h2>HTTP Code Counts</h2>
+    <div id="codes"></div>
+
+    <script>
+        const latencyData = {{ latency_plot | safe }};
+        Plotly.newPlot('latency', latencyData.data, latencyData.layout);
+
+        const rpsData = {{ rps_plot | safe }};
+        Plotly.newPlot('rps', rpsData.data, rpsData.layout);
+
+        const userData = {{ users_plot | safe }};
+        Plotly.newPlot('users', userData.data, userData.layout);
+
+        const codeData = {{ code_plot | safe }};
+        Plotly.newPlot('codes', codeData.data, codeData.layout);
+    </script>
+</body>
+</html>

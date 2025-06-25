@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Artillery Performance Report</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding: 40px;">
+<div class="container">
+    <h1 class="text-center">📊 Artillery Performance Report</h1>
+    <hr>
+
+    <h3>📁 Summary</h3>
+    <table class="table table-bordered">
+        <tr><th>Start Time</th><td>{{ summary.start_time }}</td></tr>
+        <tr><th>End Time</th><td>{{ summary.end_time }}</td></tr>
+        <tr><th>Duration</th><td>{{ summary.duration_sec }} seconds</td></tr>
+        <tr><th>Total Requests</th><td>{{ summary.total_requests }}</td></tr>
+        <tr><th>Virtual Users Created</th><td>{{ summary.total_vusers }}</td></tr>
+        <tr><th>Completed</th><td>{{ summary.completed }}</td></tr>
+        <tr><th>Failed</th><td>{{ summary.failed }}</td></tr>
+    </table>
+
+    <h3>📈 Charts</h3>
+    <div id="latency_chart" style="height: 400px;"></div>
+    <div id="rps_chart" style="height: 400px;"></div>
+    <div id="users_chart" style="height: 400px;"></div>
+    <div id="http_code_chart" style="height: 400px;"></div>
+
+    <h3>🚨 Logical / Application Errors</h3>
+    <div id="custom_error_chart" style="height: 400px;"></div>
+
+    <h3>📊 Statistics Table (Per Interval)</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Latency (ms)</th>
+                <th>RPS</th>
+                <th>Users</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in stats_table %}
+            <tr>
+                <td>{{ row.time }}</td>
+                <td>{{ row.latency }}</td>
+                <td>{{ row.rps }}</td>
+                <td>{{ row.users }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>❗ Error Summary</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Error Type</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for err in errors_table %}
+            <tr>
+                <td>{{ err.type }}</td>
+                <td>{{ err.count }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        Plotly.newPlot("latency_chart", {{ latency_plot | safe }}.data, {{ latency_plot | safe }}.layout);
+        Plotly.newPlot("rps_chart", {{ rps_plot | safe }}.data, {{ rps_plot | safe }}.layout);
+        Plotly.newPlot("users_chart", {{ users_plot | safe }}.data, {{ users_plot | safe }}.layout);
+        Plotly.newPlot("http_code_chart", {{ http_code_plot | safe }}.data, {{ http_code_plot | safe }}.layout);
+        Plotly.newPlot("custom_error_chart", {{ custom_error_plot | safe }}.data, {{ custom_error_plot | safe }}.layout);
+    </script>
+</div>
+</body>
+</html>

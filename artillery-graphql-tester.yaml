@@ -1,0 +1,88 @@
+config:
+  target: "https://imdb-promptflix-ferdy-940d7813f0.ddn.hasura.app"
+  processor: "./hooks-config.js"
+  defaults:
+      headers:
+        x-hasura-ddn-token: eyJhbGciOiJFZERTQSIsImtpZCI6IjlkX2JMaEVGbWpSelMwanpxajlOSk15Vmt4TUpDZGpJeVkweFZxMFpWNlEiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJjNmIyMzZhNy1iMGRiLTRiNzYtYTRmYS1hY2ZlNmZlMmVkOTUiLCJleHAiOjE3NTA4MzAzNzMsImlhdCI6MTc1MDgyNjc3MywiaXNzIjoiaHR0cHM6Ly9hdXRoLnByby5oYXN1cmEuaW8vZGRuL3Rva2VuIiwic3ViIjoiNzFhNmU4ZWEtYTUxMC00ZTkzLWFjNWEtMDhlMzMxY2IwMjg4In0.ojR2KKC5Uuc4J0ow6h6ADPx41qicXSqQFXA0EVk5RlGcFg3XIT2-GBB6sOLDetWdfExrB9B20OJzX7hnAsfYCg
+        # Auth-Token: ${AuthTOKEN}
+        # x-hasura-admin-secret: "WBUwzIiW1nK86lW"
+        # add additional header (if any)
+  phases:
+    - duration: 60
+      arrivalRate: 2
+      # rampTo: 5
+      # name: Warm up phase
+    # - duration: 30
+    #   arrivalRate: 5
+    #   rampTo: 10
+    #   name: Ramp up load
+
+  plugins:
+    metrics-by-endpoint:
+      useOnlyRequestNames: true
+      metricsNamespace: operation
+
+  # publish-metrics:
+  # - type: prometheus
+  #   pushgateway: "http://143.198.129.138:9091"
+  #   tags:
+  #     - "testId: testName"
+  #     - "type:loadtest"
+  #   ssl: false
+
+  expect: 
+    - statusCode: 200
+  http:
+    timeout: 15000
+  reportFailuresAsErrors: true
+  outputFormat: json
+
+scenarios:
+  - name: 'Create and fetch messages flow'
+    flow:
+      - post:
+          url: '/graphql'
+          json:
+            query: |
+                query GetMovieQuery {
+                  public_movies(limit: 3) {
+                    director
+                    released_year
+                    series_title
+                  }
+                }
+          afterResponse: "checkGraphQLResponse"
+          # capture:
+          #   json: 'errors[0].message'
+          #   as: 'graphql_error_message'
+          #   optional: true
+  - name: 'invalid query'
+    flow:
+      - post:
+          url: '/graphql'
+          json:
+            query: |
+                query GetMovieQuery {
+                  public_movies(limit: 3) {
+                    director
+                    released_year
+                    series_titl
+                  }
+                }
+          afterResponse: "checkGraphQLResponse"
+  - name: 'token jwt false'
+    flow:
+      - post:
+          url: '/graphql'
+          headers:
+            x-hasura-ddn-token: ""
+          json:
+            query: |
+                query GetMovieQuery {
+                  public_movies(limit: 3) {
+                    director
+                    released_year
+                    series_title
+                  }
+                }
+          afterResponse: "checkGraphQLResponse"

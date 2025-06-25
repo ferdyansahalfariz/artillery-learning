@@ -1,0 +1,851 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.Create and fetch messages flow": 300,
+      "vusers.created": 300,
+      "http.requests": 300,
+      "http.codes.200": 300,
+      "http.responses": 300,
+      "http.downloaded_bytes": 31800,
+      "operation./graphql.codes.200": 300,
+      "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 300,
+      "vusers.failed": 300
+    },
+    "rates": {
+      "http.request_rate": 3
+    },
+    "firstCounterAt": 1750826794635,
+    "firstHistogramAt": 1750826795106,
+    "lastCounterAt": 1750826854018,
+    "lastHistogramAt": 1750826854016,
+    "firstMetricAt": 1750826794635,
+    "lastMetricAt": 1750826854018,
+    "period": 1750826850000,
+    "summaries": {
+      "http.response_time": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      },
+      "http.response_time.2xx": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      },
+      "operation.response_time./graphql": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      }
+    },
+    "histograms": {
+      "http.response_time": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      },
+      "http.response_time.2xx": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      },
+      "operation.response_time./graphql": {
+        "min": 25,
+        "max": 252,
+        "count": 300,
+        "mean": 30.8,
+        "p50": 29.1,
+        "median": 29.1,
+        "p75": 30.9,
+        "p90": 32.8,
+        "p95": 36.2,
+        "p99": 45.2,
+        "p999": 127.8
+      }
+    }
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 30,
+        "vusers.created": 30,
+        "http.requests": 30,
+        "http.codes.200": 30,
+        "http.responses": 30,
+        "http.downloaded_bytes": 3180,
+        "operation./graphql.codes.200": 30,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 30,
+        "vusers.failed": 30
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826794635,
+      "firstHistogramAt": 1750826795106,
+      "lastCounterAt": 1750826799989,
+      "lastHistogramAt": 1750826799989,
+      "firstMetricAt": 1750826794635,
+      "lastMetricAt": 1750826799989,
+      "period": "1750826790000",
+      "summaries": {
+        "http.response_time": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "http.response_time.2xx": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "operation.response_time./graphql": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "http.response_time.2xx": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "operation.response_time./graphql": {
+          "min": 25,
+          "max": 41,
+          "count": 30,
+          "mean": 29.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 34.1,
+          "p95": 34.8,
+          "p99": 36.2,
+          "p999": 36.2
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 50,
+        "vusers.created": 50,
+        "http.requests": 50,
+        "http.codes.200": 50,
+        "http.responses": 50,
+        "http.downloaded_bytes": 5300,
+        "operation./graphql.codes.200": 50,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 50,
+        "vusers.failed": 50
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826800633,
+      "firstHistogramAt": 1750826800746,
+      "lastCounterAt": 1750826809973,
+      "lastHistogramAt": 1750826809970,
+      "firstMetricAt": 1750826800633,
+      "lastMetricAt": 1750826809973,
+      "period": "1750826800000",
+      "summaries": {
+        "http.response_time": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 252,
+          "count": 50,
+          "mean": 34.7,
+          "p50": 30.3,
+          "median": 30.3,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 45.2,
+          "p999": 45.2
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 50,
+        "vusers.created": 50,
+        "http.requests": 50,
+        "http.codes.200": 50,
+        "http.responses": 50,
+        "http.downloaded_bytes": 5300,
+        "operation./graphql.codes.200": 50,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 50,
+        "vusers.failed": 50
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826810641,
+      "firstHistogramAt": 1750826810753,
+      "lastCounterAt": 1750826819968,
+      "lastHistogramAt": 1750826819966,
+      "firstMetricAt": 1750826810641,
+      "lastMetricAt": 1750826819968,
+      "period": "1750826810000",
+      "summaries": {
+        "http.response_time": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 40,
+          "count": 50,
+          "mean": 29.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 36.2,
+          "p999": 36.2
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 50,
+        "vusers.created": 50,
+        "http.requests": 50,
+        "http.codes.200": 50,
+        "http.responses": 50,
+        "http.downloaded_bytes": 5300,
+        "operation./graphql.codes.200": 50,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 50,
+        "vusers.failed": 50
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826820647,
+      "firstHistogramAt": 1750826820761,
+      "lastCounterAt": 1750826829988,
+      "lastHistogramAt": 1750826829986,
+      "firstMetricAt": 1750826820647,
+      "lastMetricAt": 1750826829988,
+      "period": "1750826820000",
+      "summaries": {
+        "http.response_time": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 127,
+          "count": 50,
+          "mean": 31.5,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.1,
+          "p95": 34.1,
+          "p99": 39.3,
+          "p999": 39.3
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 50,
+        "vusers.created": 50,
+        "http.requests": 50,
+        "http.codes.200": 50,
+        "http.responses": 50,
+        "http.downloaded_bytes": 5300,
+        "operation./graphql.codes.200": 50,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 50,
+        "vusers.failed": 50
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826830655,
+      "firstHistogramAt": 1750826830769,
+      "lastCounterAt": 1750826839992,
+      "lastHistogramAt": 1750826839991,
+      "firstMetricAt": 1750826830655,
+      "lastMetricAt": 1750826839992,
+      "period": "1750826830000",
+      "summaries": {
+        "http.response_time": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 59,
+          "count": 50,
+          "mean": 30.1,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.9,
+          "p90": 32.8,
+          "p95": 32.8,
+          "p99": 34.8,
+          "p999": 34.8
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 50,
+        "vusers.created": 50,
+        "http.requests": 50,
+        "http.codes.200": 50,
+        "http.responses": 50,
+        "http.downloaded_bytes": 5300,
+        "operation./graphql.codes.200": 50,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 50,
+        "vusers.failed": 50
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826840659,
+      "firstHistogramAt": 1750826840790,
+      "lastCounterAt": 1750826849990,
+      "lastHistogramAt": 1750826849989,
+      "firstMetricAt": 1750826840659,
+      "lastMetricAt": 1750826849990,
+      "period": "1750826840000",
+      "summaries": {
+        "http.response_time": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        },
+        "http.response_time.2xx": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        },
+        "operation.response_time./graphql": {
+          "min": 26,
+          "max": 39,
+          "count": 50,
+          "mean": 29.8,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 34.8,
+          "p95": 37,
+          "p99": 37.7,
+          "p999": 37.7
+        }
+      }
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Create and fetch messages flow": 20,
+        "vusers.created": 20,
+        "http.requests": 20,
+        "http.codes.200": 20,
+        "http.responses": 20,
+        "http.downloaded_bytes": 2120,
+        "operation./graphql.codes.200": 20,
+        "errors.GraphQL error(s): validation failed: no such field on type public_movies: series_titl": 20,
+        "vusers.failed": 20
+      },
+      "rates": {
+        "http.request_rate": 5
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1750826850663,
+      "firstHistogramAt": 1750826850771,
+      "lastCounterAt": 1750826854018,
+      "lastHistogramAt": 1750826854016,
+      "firstMetricAt": 1750826850663,
+      "lastMetricAt": 1750826854018,
+      "period": "1750826850000",
+      "summaries": {
+        "http.response_time": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "http.response_time.2xx": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "operation.response_time./graphql": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "http.response_time.2xx": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        },
+        "operation.response_time./graphql": {
+          "min": 25,
+          "max": 44,
+          "count": 20,
+          "mean": 29.9,
+          "p50": 29.1,
+          "median": 29.1,
+          "p75": 30.3,
+          "p90": 32.8,
+          "p95": 34.8,
+          "p99": 34.8,
+          "p999": 34.8
+        }
+      }
+    }
+  ]
+}
