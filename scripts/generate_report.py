@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
 
 input_json = sys.argv[1]
 basename = os.path.splitext(os.path.basename(input_json))[0]
-output_html_path = f"/mnt/c/Users/dell/Downloads/artillery-learning/report-{basename}.html"
+output_html_path = f"results-html/report-{basename}.html"
 
 with open(input_json) as f:
     data = json.load(f)
