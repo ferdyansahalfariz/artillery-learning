@@ -60,3 +60,59 @@ Berikut adalah contoh hasil generate file HTML nya saat dibuka di browser:
 
 
 ![image](https://github.com/user-attachments/assets/561090dd-3e01-4819-b95d-758ab56c9fb8)
+
+
+# 🔍 Perbandingan JMeter vs Artillery
+
+Referensi: https://azevedorafaela.com/2020/06/09/load-tests-jmeter-vs-artillery/
+
+## Tabel Perbandingan
+
+| Aspek | **JMeter** | **Artillery** |
+|-------|------------|---------------|
+| **Dukungan Protokol** | HTTP, FTP, JDBC, SOAP, LDAP, TCP, JMS, SMTP, POP3, IMAP | HTTP, WebSocket, Socket.io |
+| **Penulisan Skrip** | GUI oriented | script-oriented |
+| **Pendekatan "Test as Code"** | Lemah, sulit digunakan, berbasis Java | Kuat, berbasis YAML/JSON, mudah dipelihara |
+| **Fleksibilitas Ramp-Up** | Butuh plugin untuk fleksibilitas | Native support ramp-up dan fase beban fleksibel |
+| **Analisis Hasil Tes** | Ada, melalui GUI dan listener | Ada, melalui report akhir atau log terminal |
+| **Konsumsi Resource** | Berat, konsumsi memori tinggi saat banyak pengguna | Ringan, efisien, mendukung multicore |
+| **Integrasi dengan Version Control (Git, dll.)** | Sulit (karena berbasis GUI) | Mudah (karena berbasis file/script) |
+| **Jumlah Pengguna Bersamaan** | Ribuan (dengan batasan & konfigurasi tambahan) | Ribuan pengguna lebih ringan di satu mesin |
+| **Fitur Perekaman Skrip (Script Recording)** | Ada | Tidak tersedia |
+| **Eksekusi Terdistribusi** | Ya | Ya |
+| **Monitoring Saat Tes** | Ada, tapi konsumsi memori tinggi | Tidak realtime, hanya laporan akhir atau log terminal |
+
+---
+
+## ✅ Kelebihan Artillery dibanding JMeter
+
+- **Ringan dan Cepat**  
+  Lebih ringan dijalankan di mesin lokal, bahkan untuk ribuan pengguna. Konsumsi resource rendah dan efisien.
+
+- **Mudah Dipelihara**  
+  Skrip berbasis YAML/JSON mudah dibaca, ditulis, dan diintegrasikan ke version control.
+
+- **Modern dan Fleksibel**  
+  Native support untuk WebSocket dan Socket.io. Tidak butuh GUI.
+
+- **Cepat dalam Penulisan Skrip**  
+  Tersedia mode cepat, tidak butuh pembuatan skrip kompleks.
+
+- **Mudah Diintegrasikan**  
+  Mudah diinstal (berbasis Node.js), cocok untuk CI/CD pipeline.
+
+---
+
+## ❌ Kekurangan Artillery dibanding JMeter
+
+- **Dukungan Protokol Terbatas**  
+  Tidak cocok jika membutuhkan FTP, SOAP, JDBC, atau protokol lainnya.
+
+- **Tidak Ada Fitur Perekaman**  
+  Tidak tersedia script recording seperti di JMeter.
+
+- **Monitoring Terbatas**  
+  Tidak mendukung monitoring real-time.
+
+- **Kurang Ideal untuk Tes Kompleks**  
+  Tidak cocok untuk skenario load test yang kompleks dengan banyak protokol atau integrasi berat.
