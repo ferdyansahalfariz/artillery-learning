@@ -41,7 +41,9 @@ npx artillery run artillery-graphql-tester.yaml -o results-json/output-artillery
 ```
 command itu akan menginput file yaml `artillery-graphql-tester.yaml` dengan berdasarkan pada file env `.env` sebagai env var nya kemudian hasil running artillerynya akan disimpan ke file json `results-json/output-artillery-graphql-test.json`
 
-4. File output json kemudian bisa di generate menjadi file HTML dari custom script `scripts/generate_report.py` agar hasil yang di dapat menjadi lebih informatif karena sudah di visualisasikan. Berikut command untuk generate nya:
+## Generate report dari output json file ke HTML
+
+File output json kemudian bisa di generate menjadi file HTML dari custom script `scripts/generate_report.py` agar hasil yang di dapat menjadi lebih informatif karena sudah di visualisasikan. Berikut command untuk generate nya:
 
 ```
 python3 scripts/generate_report.py results-json/output-artillery-graphql-test.json
