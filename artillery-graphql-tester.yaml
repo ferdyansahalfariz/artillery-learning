@@ -4,7 +4,7 @@ config:
   defaults:
       headers:
         x-hasura-ddn-token: '{{ $env.DDN_TOKEN }}'
-        # Auth-Token: ${AuthTOKEN}
+        # Authorization: '{{ $env.DDN_TOKEN_BEARER }}'
         # x-hasura-admin-secret: "WBUwzIiW1nK86lW"
         # add additional header (if any)
   phases:
