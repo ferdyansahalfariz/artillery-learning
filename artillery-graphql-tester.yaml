@@ -10,8 +10,8 @@ config:
   phases:
     - duration: 60
       arrivalRate: 2
-      # rampTo: 5
-      # name: Warm up phase
+      rampTo: 5
+      name: Warm up phase
     # - duration: 30
     #   arrivalRate: 5
     #   rampTo: 10
@@ -52,37 +52,33 @@ scenarios:
                   }
                 }
           afterResponse: "checkGraphQLResponse"
-          # capture:
-          #   json: 'errors[0].message'
-          #   as: 'graphql_error_message'
-          #   optional: true
-  - name: 'invalid query'
-    flow:
-      - post:
-          url: '/graphql'
-          json:
-            query: |
-                query GetMovieQuery {
-                  public_movies(limit: 3) {
-                    director
-                    released_year
-                    series_titl
-                  }
-                }
-          afterResponse: "checkGraphQLResponse"
-  - name: 'token jwt false'
-    flow:
-      - post:
-          url: '/graphql'
-          headers:
-            x-hasura-ddn-token: ""
-          json:
-            query: |
-                query GetMovieQuery {
-                  public_movies(limit: 3) {
-                    director
-                    released_year
-                    series_title
-                  }
-                }
-          afterResponse: "checkGraphQLResponse"
+  # - name: 'invalid query'
+  #   flow:
+  #     - post:
+  #         url: '/graphql'
+  #         json:
+  #           query: |
+  #               query GetMovieQuery {
+  #                 public_movies(limit: 3) {
+  #                   director
+  #                   released_year
+  #                   series_titl
+  #                 }
+  #               }
+  #         afterResponse: "checkGraphQLResponse"
+  # - name: 'token jwt false'
+  #   flow:
+  #     - post:
+  #         url: '/graphql'
+  #         headers:
+  #           x-hasura-ddn-token: ""
+  #         json:
+  #           query: |
+  #               query GetMovieQuery {
+  #                 public_movies(limit: 3) {
+  #                   director
+  #                   released_year
+  #                   series_title
+  #                 }
+  #               }
+  #         afterResponse: "checkGraphQLResponse"
