@@ -11,9 +11,9 @@ https://www.artillery.io/docs/get-started/get-artillery
 
 Pada dokumentasi ini digunakan versi artillery : 
 
-Artillery: 2.0.23
+- Artillery: 2.0.23
 
-Node.js:   v22.16.0
+- Node.js:   v22.16.0
 
 2. Python 
 
@@ -21,7 +21,7 @@ Hal ini digunakan untuk running script `generate-report.py` saat ingin membuat r
 
 Dalam dokumentasi ini digunakan versi Python:
 
-3.11.10
+- Python 3.11.10
 
 ## Cara Running
 
