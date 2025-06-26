@@ -116,3 +116,21 @@ Referensi: https://azevedorafaela.com/2020/06/09/load-tests-jmeter-vs-artillery/
 
 - **Kurang Ideal untuk Tes Kompleks**  
   Tidak cocok untuk skenario load test yang kompleks dengan banyak protokol atau integrasi berat.
+
+## Kapan Sebaiknya Memilih Artillery?
+- Jika butuh tool ringan, cepat, dan cocok untuk CI/CD.
+
+- Skenario test tidak terlalu kompleks dan berbasis HTTP/WebSocket.
+
+- Jika menginginkan tes berbasis file/script, bukan GUI.
+
+- Infrastruktur berbasis Node.js dan container-friendly.
+
+## Kapan Sebaiknya Memilih JMeter?
+- Jika butuh dukungan berbagai protokol (FTP, JDBC, SOAP, dll.).
+
+- Perlu GUI untuk membuat/melihat skenario dengan drag & drop.
+
+- Butuh recording untuk mempercepat penulisan skrip.
+
+- Infrastruktur sudah biasa dengan Java-based tools dan legacy systems.
